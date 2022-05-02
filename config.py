@@ -35,6 +35,7 @@ BUTTON_MENU_PLAY = 'resources/menu/button_menu_play.jpg'
 BUTTON_MENU_MAPS_EXPERT = 'resources/menu/button_menu_maps_expert.jpg'
 BUTTON_MENU_EASY_DIFF = 'resources/menu/button_menu_easy_diff.jpg'
 BUTTON_MENU_STANDARD_MODE = 'resources/menu/button_menu_standard_mode.jpg'
+BUTTON_MENU_NEXT = 'resources/menu/button_menu_next.jpg'
 
 BUTTON_GAME_START = 'resources/menu/button_game_start.jpg'
 BUTTON_GAME_FAST_FORWARD = 'resources/menu/button_game_fast_forward.jpg'
