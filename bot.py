@@ -1,4 +1,5 @@
 import pyautogui as pag
+import keyboard
 import cv2  # Needed for fuzzy matching with pyautogui
 import logging
 import time
@@ -45,7 +46,7 @@ class Bot(metaclass=ABCMeta):
             logging.info('Received reward monkeys')
             self.click_on(config.BUTTON_EVENT_COLLECT)
             self._collect_event_rewards()
-            pag.press('esc')
+            keyboard.send('esc')
 
     def _collect_event_rewards(self):
         logging.info('Collecting reward monkeys')
@@ -66,8 +67,11 @@ class Bot(metaclass=ABCMeta):
 
     def _load_next_game_trick(self):
         self.click_on(config.BUTTON_GAME_FREEPLAY)
-        pag.press('esc')
-        pag.press('esc')
+        time.sleep(1)
+        keyboard.send('esc')
+        time.sleep(1)
+        keyboard.send('esc')
+        time.sleep(1)
         self.click_on(config.BUTTON_GAME_RESTART)
         self.click_on(config.BUTTON_GAME_RESTART_CONFIRM)
 

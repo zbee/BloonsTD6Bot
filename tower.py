@@ -1,5 +1,7 @@
 import pyautogui as pag
+import keyboard
 import logging
+import time
 
 import config
 
@@ -15,12 +17,13 @@ class Tower:
         self._upgrade_path = upgrade_path
         logging.info('Placing {}'.format(self._name))
         pag.moveTo(self._position)
-        pag.typewrite(self._hotkey)
+        keyboard.send(self._hotkey)
+        time.sleep(1)
         pag.click()
 
     @staticmethod
     def _upgrade_track(track):
-        pag.press(config.HOTKEY_UPGRADES[track - 1])
+        keyboard.send(config.HOTKEY_UPGRADES[track - 1])
 
     def _tower_upgrades_to_string(self, track, to_level):
         string = ''
