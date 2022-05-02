@@ -22,6 +22,12 @@ class DarkCastleMap(Map):
         self._log_navigation()
         Bot.click_on(config.BUTTON_MENU_PLAY)
         Bot.click_on(config.BUTTON_MENU_MAPS_EXPERT)
-        Bot.click_on(config.MAPS_DARK_CASTLE)
+
+        try:
+            Bot.click_on(config.MAPS_DARK_CASTLE)
+        except:
+            Bot.click_on(config.BUTTON_MENU_MAPS_EXPERT)
+            Bot.click_on(config.MAPS_DARK_CASTLE)
+
         Bot.click_on(config.BUTTON_MENU_EASY_DIFF)
         Bot.click_on(config.BUTTON_MENU_STANDARD_MODE)
