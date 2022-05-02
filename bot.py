@@ -94,6 +94,8 @@ class Bot(metaclass=ABCMeta):
 
     def _wait_for_game_completion(self):
         logging.info('Waiting for game to be completed')
+        self.wait_for(config.BUTTON_MENU_NEXT, do_all_checks=False)
+        self.click_on(config.BUTTON_MENU_NEXT)
         self.wait_for(config.BUTTON_GAME_TO_HOME, do_all_checks=False)
         logging.info('Game completed')
 
