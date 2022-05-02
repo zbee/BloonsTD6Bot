@@ -29,5 +29,5 @@ class DarkCastleMap(Map):
             Bot.click_on(config.BUTTON_MENU_MAPS_EXPERT)
             Bot.click_on(config.MAPS_DARK_CASTLE)
 
-        Bot.click_on(config.BUTTON_MENU_EASY_DIFF)
+        Bot.click_on(config.BUTTON_MENU_DIFF_EASY)
         Bot.click_on(config.BUTTON_MENU_STANDARD_MODE)

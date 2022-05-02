@@ -33,7 +33,9 @@ LOGS_DIR = '_logs'
 # Menu
 BUTTON_MENU_PLAY = 'resources/menu/button_menu_play.jpg'
 BUTTON_MENU_MAPS_EXPERT = 'resources/menu/button_menu_maps_expert.jpg'
-BUTTON_MENU_EASY_DIFF = 'resources/menu/button_menu_easy_diff.jpg'
+BUTTON_MENU_DIFF_EASY = 'resources/menu/button_menu_diff_easy.jpg'
+BUTTON_MENU_DIFF_MEDIUM = 'resources/menu/button_menu_diff_medium.jpg'
+BUTTON_MENU_DIFF_HARD = 'resources/menu/button_menu_diff_hard.jpg'
 BUTTON_MENU_STANDARD_MODE = 'resources/menu/button_menu_standard_mode.jpg'
 BUTTON_MENU_NEXT = 'resources/menu/button_menu_next.jpg'
 
