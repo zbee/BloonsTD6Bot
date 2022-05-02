@@ -7,14 +7,13 @@ import config
 
 
 class Tower:
-    def __init__(self, bot, hotkey, position, upgrade_path, name='tower'):
+    def __init__(self, bot, name, hotkey, position):
         self._name = name
         self._bot = bot
         self._bot.wait_for(position)
         self._position = self._bot.wait_location
         self._hotkey = hotkey
         self._upgrades = [0, 0, 0]
-        self._upgrade_path = upgrade_path
         logging.info('Placing {}'.format(self._name))
         pag.moveTo(self._position)
         keyboard.send(self._hotkey)
@@ -39,7 +38,7 @@ class Tower:
         for i in range(to_level - self._upgrades[track - 1]):
             tower_upgrade_text = self._tower_upgrades_to_string(track, self._upgrades[track - 1] + i + 1)
             logging.info('Waiting for {} {} to become available'.format(self._name, tower_upgrade_text))
-            self._bot.wait_for(self._upgrade_path.format(track, self._upgrades[track - 1] + i + 1))
+            self._bot.wait_for('resources/towers/{}/upgrade_{}_{}.jpg'.format(self._name, track, self._upgrades[track - 1] + i + 1))
             self._upgrade_track(track)
             logging.info('Upgraded {} to {}'.format(self._name, tower_upgrade_text))
         self._upgrades[track - 1] = to_level
