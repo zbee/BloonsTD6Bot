@@ -59,10 +59,6 @@ COLLECTION_Y = 450
 BUTTON_EVENT_COLLECT = 'resources/menu/button_event_collect.jpg'
 BUTTON_EVENT_CONTINUE = 'resources/menu/button_event_continue.jpg'
 
-# Towers
-TOWER_NINJA_UPGRADE = 'resources/towers/ninja/upgrade_{}_{}.jpg'
-TOWER_SUPER_UPGRADE = 'resources/towers/super/upgrade_{}_{}.jpg'
-
 # Heroes
 HERO_SELECTED_OBYN_1 = 'resources/towers/heroes/obyn_1.jpg'
 HERO_SELECTED_OBYN_2 = 'resources/towers/heroes/obyn_2.jpg'
@@ -77,6 +73,7 @@ MAPS_DARK_CASTLE = 'resources/maps/dark_castle/map.jpg'
 MAPS_POS_DARK_CASTLE_INTERSECTION_TOP = 'resources/maps/dark_castle/intersection_top_path.jpg'
 MAPS_POS_DARK_CASTLE_INTERSECTION_BOTTOM = 'resources/maps/dark_castle/intersection_bottom_path.jpg'
 MAPS_POS_DARK_CASTLE_TOP_LEFT_MAIN_ROAD = 'resources/maps/dark_castle/top_left_main_road.jpg'
+MAPS_POS_DARK_CASTLE_BOTTOM_LEFT_MAIN_ROAD = 'resources/maps/dark_castle/bottom_left_main_road.jpg'
 
 MAPS_ROUND_DARK_CASTLE_4 = 'resources/maps/dark_castle/round_4.jpg'  # 23
 MAPS_ROUND_DARK_CASTLE_20 = 'resources/maps/dark_castle/round_20.jpg'  # 163
