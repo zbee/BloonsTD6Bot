@@ -3,7 +3,35 @@ import logging
 import config
 from bot import Bot
 from tower import Tower
-from map import DarkCastleMap
+
+class Map:
+
+    def __init__(self, name):
+        self._name = name
+
+    def _log_navigation(self):
+        logging.info('Navigating to map {}'.format(self._name))
+
+
+class DarkCastleMap(Map):
+
+    def __init__(self):
+        super().__init__('Dark Castle')
+
+    def navigate_to(self):
+        self._log_navigation()
+        Bot.click_on(config.BUTTON_MENU_PLAY)
+        Bot.click_on(config.BUTTON_MENU_MAPS_EXPERT)
+
+        try:
+            Bot.click_on(config.MAPS_DARK_CASTLE)
+        except:
+            Bot.click_on(config.BUTTON_MENU_MAPS_EXPERT)
+            Bot.click_on(config.MAPS_DARK_CASTLE)
+
+        Bot.click_on(config.BUTTON_MENU_DIFF_EASY)
+        Bot.click_on(config.BUTTON_MENU_STANDARD_MODE)
+
 
 
 class DarkCastleBot(Bot):
