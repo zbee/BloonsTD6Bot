@@ -7,18 +7,17 @@ class DarkCastleBot(Bot):
 
     def __init__(self):
         super().__init__()
-        #self._name = 'Dark Castle Easy'
+        self._name = 'Dark Castle on Easy'
 
     def navigate_to(self):
-        #logging.info('Navigating to map {}'.format(self._name))
+        logging.info('Navigating to map {}'.format(self._name))
         Bot.click_on(config.BUTTON_MENU_PLAY)
         Bot.click_on(config.BUTTON_MENU_MAPS_EXPERT)
 
-        try:
-            Bot.click_on(config.MAPS_DARK_CASTLE)
-        except:
+        if not Bot._is_present(self, config.MAPS_DARK_CASTLE):
             Bot.click_on(config.BUTTON_MENU_MAPS_EXPERT)
-            Bot.click_on(config.MAPS_DARK_CASTLE)
+        
+        Bot.click_on(config.MAPS_DARK_CASTLE)
 
         Bot.click_on(config.BUTTON_MENU_DIFF_EASY)
         Bot.click_on(config.BUTTON_MENU_STANDARD_MODE)
