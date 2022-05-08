@@ -3,6 +3,7 @@ import keyboard
 import cv2  # Needed for fuzzy matching with pyautogui
 import logging
 import time
+import random
 from abc import ABCMeta, abstractmethod
 
 import config
@@ -142,10 +143,9 @@ class Bot(metaclass=ABCMeta):
 
     # Main
     def main(self, required_hero=None):
-        logging.info('Please navigate to the top left corner of the game, you have {} seconds'.format(
-            config.START_SLEEP_SECONDS))
+        logging.info('MODIFIED BY H1 - You have {} seconds before we launch'.format(config.START_SLEEP_SECONDS))
         time.sleep(config.START_SLEEP_SECONDS)
-        self._offset = pag.position()
+        self._offset = (random.randint(0, 15), random.randint(0, 15))
         logging.debug('Screen offset set at {}'.format(self._offset))
         if required_hero:
             self._check_selected_hero(config.HERO_SELECTED[required_hero.lower()], required_hero)
