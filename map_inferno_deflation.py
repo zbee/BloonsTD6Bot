@@ -27,11 +27,21 @@ class InfernoDeflationBot(Bot):
         self._load_game(self.navigate_to)
         self._wait_for_map_load()
 
-        logging.info('Place 2 snipers with path 0-2-4')
+        # Click ok in popup that explains the special mode rules
+        logging.info('Dismiss rule popup')
+        self.wait_for(config.BUTTON_OVERWRITE_OK)
+        self.click_on(config.BUTTON_OVERWRITE_OK)
+
+        logging.info('Place right sniper with path 0-2-4')
 
         sniperRight = Tower(self, 'sniper', config.HOTKEY_TOWER_SNIPER, config.MAPS_POS_INFERNO_ISLAND_RIGHT_SNIPER)
         sniperRight.upgrade(2, 2)
         sniperRight.upgrade(3, 4)
+
+        logging.info('Starting game')
+        self._start_game()
+
+        logging.info('Place left sniper with path 0-2-4')
 
         sniperLeft = Tower(self, 'sniper', config.HOTKEY_TOWER_SNIPER, config.MAPS_POS_INFERNO_ISLAND_LEFT_SNIPER)
         sniperLeft.upgrade(2, 2)
@@ -47,10 +57,7 @@ class InfernoDeflationBot(Bot):
 
         logging.info('Finished with hero placement')
 
-        logging.info('Starting game')
-        self._start_game()
-
-        logging.info('Deflation mode -> chillout until game is finished')
+        logging.info('Deflation mode -> chill')
 
         self._wait_for_game_completion()
         self._game_completed()
