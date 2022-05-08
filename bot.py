@@ -18,7 +18,8 @@ class Bot(metaclass=ABCMeta):
         pag.PAUSE = config.PYAUTOGUI_SLEEP_SECONDS_BETWEEN_CALLS
         config.init_logging()
         logging.info('Bloons TD6 bot initialising')
-        logging.debug('OpenCV loaded from {}'.format(cv2.data.haarcascades))
+        logging.debug('OpenCV loaded')
+        # logging.debug('OpenCV loaded from {}'.format(cv2.data.haarcascades))
 
     @property
     def wait_location(self):
@@ -59,9 +60,9 @@ class Bot(metaclass=ABCMeta):
         pag.screenshot(self._monkeys_collection_path)
         self.click_on(config.BUTTON_EVENT_CONTINUE)
 
-    def _load_game(self, game_map):
+    def _load_game(self, navigator):
         if config.DO_OPEN_MONKEYS or self._game_counter == 1:
-            game_map.navigate_to()
+            navigator()
         else:
             self._load_next_game_trick()
 

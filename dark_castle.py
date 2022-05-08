@@ -3,23 +3,14 @@ import logging
 import config
 from bot import Bot
 from tower import Tower
-
-class Map:
-
-    def __init__(self, name):
-        self._name = name
-
-    def _log_navigation(self):
-        logging.info('Navigating to map {}'.format(self._name))
-
-
-class DarkCastleMap(Map):
+class DarkCastleBot(Bot):
 
     def __init__(self):
-        super().__init__('Dark Castle')
+        super().__init__()
+        #self._name = 'Dark Castle Easy'
 
     def navigate_to(self):
-        self._log_navigation()
+        #logging.info('Navigating to map {}'.format(self._name))
         Bot.click_on(config.BUTTON_MENU_PLAY)
         Bot.click_on(config.BUTTON_MENU_MAPS_EXPERT)
 
@@ -32,17 +23,9 @@ class DarkCastleMap(Map):
         Bot.click_on(config.BUTTON_MENU_DIFF_EASY)
         Bot.click_on(config.BUTTON_MENU_STANDARD_MODE)
 
-
-
-class DarkCastleBot(Bot):
-
-    def __init__(self):
-        super().__init__()
-        self._map = DarkCastleMap()
-
     # Single game
     def _play_game(self):
-        self._load_game(self._map)
+        self._load_game(self.navigate_to)
         self._wait_for_map_load()
 
         Tower(self, 'hero', config.HOTKEY_HERO, config.MAPS_POS_DARK_CASTLE_INTERSECTION_TOP)
