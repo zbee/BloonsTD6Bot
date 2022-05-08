@@ -27,10 +27,11 @@ class InfernoDeflationBot(Bot):
         self._load_game(self.navigate_to)
         self._wait_for_map_load()
 
-        # Click ok in popup that explains the special mode rules
-        logging.info('Dismiss rule popup')
-        self.wait_for(config.BUTTON_OVERWRITE_OK)
-        self.click_on(config.BUTTON_OVERWRITE_OK)
+        # Click ok in popup that explains the special mode rules, only on first game
+        if self._game_counter == 1:
+            logging.info('Dismiss rule popup')
+            self.wait_for(config.BUTTON_OVERWRITE_OK)
+            self.click_on(config.BUTTON_OVERWRITE_OK)
 
         logging.info('Place right sniper with path 0-2-4')
 
