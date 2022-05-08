@@ -37,6 +37,7 @@ BUTTON_MENU_DIFF_EASY = 'resources/menu/button_menu_diff_easy.jpg'
 BUTTON_MENU_DIFF_MEDIUM = 'resources/menu/button_menu_diff_medium.jpg'
 BUTTON_MENU_DIFF_HARD = 'resources/menu/button_menu_diff_hard.jpg'
 BUTTON_MENU_STANDARD_MODE = 'resources/menu/button_menu_standard_mode.jpg'
+BUTTON_MENU_DEFLATION_MODE = 'resources/menu/button_menu_deflation_mode.jpg'
 BUTTON_MENU_NEXT = 'resources/menu/button_menu_next.jpg'
 
 BUTTON_GAME_START = 'resources/menu/button_game_start.jpg'
@@ -78,6 +79,14 @@ MAPS_POS_DARK_CASTLE_BOTTOM_LEFT_MAIN_ROAD = 'resources/maps/dark_castle/bottom_
 MAPS_ROUND_DARK_CASTLE_4 = 'resources/maps/dark_castle/round_4.jpg'  # 23
 MAPS_ROUND_DARK_CASTLE_20 = 'resources/maps/dark_castle/round_20.jpg'  # 163
 
+# Inferno
+MAPS_INFERNO = 'resources/maps/inferno/map.jpg'
+
+MAPS_POS_INFERNO_ISLAND_RIGHT_SNIPER = 'resources/maps/inferno/island_right_sniper.jpg'
+MAPS_POS_INFERNO_ISLAND_RIGHT_ALCHEMIST = 'resources/maps/inferno/island_right_alchemist.jpg'
+MAPS_POS_INFERNO_ISLAND_LEFT_SNIPER = 'resources/maps/inferno/island_left_sniper.jpg'
+MAPS_POS_INFERNO_ISLAND_LEFT_ALCHEMIST = 'resources/maps/inferno/island_left_alchemist.jpg'
+
 # Hotkeys
 HOTKEY_UPGRADE_1 = ','
 HOTKEY_UPGRADE_2 = '.'
@@ -87,3 +96,5 @@ HOTKEY_UPGRADES = [HOTKEY_UPGRADE_1, HOTKEY_UPGRADE_2, HOTKEY_UPGRADE_3]
 HOTKEY_HERO = 'u'
 HOTKEY_TOWER_NINJA = 'd'
 HOTKEY_TOWER_SUPER_MONKEY = 's'
+HOTKEY_TOWER_SNIPER = 'z'
+HOTKEY_TOWER_ALCHEMIST = 'f'
