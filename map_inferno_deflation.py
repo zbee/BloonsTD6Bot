@@ -48,10 +48,13 @@ class InfernoDeflationBot(Bot):
         sniperLeft.upgrade(2, 2)
         sniperLeft.upgrade(3, 4)
 
-        logging.info('Place 2 alchemists with path 2-0-0')
+        logging.info('Place right alchemist with path 3-2-0')
 
         alchemistRight = Tower(self, 'alchemist', config.HOTKEY_TOWER_ALCHEMIST, config.MAPS_POS_INFERNO_ISLAND_RIGHT_ALCHEMIST)
-        alchemistRight.upgrade(1, 2)
+        alchemistRight.upgrade(1, 3)
+        alchemistRight.upgrade(2, 2)
+
+        logging.info('Place left alchemist with path 2-0-0')
 
         alchemistLeft = Tower(self, 'alchemist', config.HOTKEY_TOWER_ALCHEMIST, config.MAPS_POS_INFERNO_ISLAND_LEFT_ALCHEMIST)
         alchemistLeft.upgrade(1, 2)
