@@ -8,6 +8,7 @@ class InfernoDeflationBot(Bot):
     def __init__(self):
         super().__init__()
         self._name = 'Inferno on Deflation'
+        self._has_special_rules_popup = True
 
     def navigate_to(self):
         logging.info('Navigating to map {}'.format(self._name))
@@ -27,8 +28,9 @@ class InfernoDeflationBot(Bot):
         self._load_game(self.navigate_to)
         self._wait_for_map_load()
 
+
         # Click ok in popup that explains the special mode rules, only on first game
-        if self._game_counter == 1:
+        if self._has_special_rules_popup and self._game_counter == 1:
             logging.info('Dismiss rule popup')
             self.wait_for(config.BUTTON_OVERWRITE_OK)
             self.click_on(config.BUTTON_OVERWRITE_OK)
