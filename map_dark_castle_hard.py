@@ -53,7 +53,10 @@ class DarkCastleBot(Bot):
 
         super_monkey.upgrade(3, 3)
 
-        # maybe an alchemist
+        # what worked:
+        # alchemist for the super monkey 4-2-0
+        # moab malm sniper 4-0-2
+        # necro 0-2-4
 
         self._wait_for_game_completion()
         self._game_completed()
