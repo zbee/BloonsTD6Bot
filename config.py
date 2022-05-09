@@ -75,9 +75,12 @@ MAPS_POS_DARK_CASTLE_INTERSECTION_TOP = 'resources/maps/dark_castle/intersection
 MAPS_POS_DARK_CASTLE_INTERSECTION_BOTTOM = 'resources/maps/dark_castle/intersection_bottom_path.jpg'
 MAPS_POS_DARK_CASTLE_TOP_LEFT_MAIN_ROAD = 'resources/maps/dark_castle/top_left_main_road.jpg'
 MAPS_POS_DARK_CASTLE_BOTTOM_LEFT_MAIN_ROAD = 'resources/maps/dark_castle/bottom_left_main_road.jpg'
+MAPS_POS_DARK_CASTLE_BOTTOM_RIGHT_MAIN_ROAD = 'resources/maps/dark_castle/bottom_right_main_road.jpg'
 
 MAPS_ROUND_DARK_CASTLE_4 = 'resources/maps/dark_castle/round_4.jpg'  # 23
+MAPS_ROUND_DARK_CASTLE_6 = 'resources/maps/dark_castle/round_6.jpg'
 MAPS_ROUND_DARK_CASTLE_20 = 'resources/maps/dark_castle/round_20.jpg'  # 163
+MAPS_ROUND_DARK_CASTLE_24 = 'resources/maps/dark_castle/round_24.jpg'
 
 # Inferno
 MAPS_INFERNO = 'resources/maps/inferno/map.jpg'
@@ -98,3 +101,4 @@ HOTKEY_TOWER_NINJA = 'd'
 HOTKEY_TOWER_SUPER_MONKEY = 's'
 HOTKEY_TOWER_SNIPER = 'z'
 HOTKEY_TOWER_ALCHEMIST = 'f'
+HOTKEY_TOWER_DART_MONKEY = 'q'
